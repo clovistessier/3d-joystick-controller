@@ -101,7 +101,7 @@ void loop()
   OscEther.send(host, send_port_osculator, "/right/x", static_cast<float>(rx/4095.0f));
   OscEther.send(host, send_port_osculator, "/right/y", static_cast<float>(ry/4095.0f));
   OscEther.send(host, send_port_osculator, "/right/z", static_cast<float>(rz/4095.0f));
-  OscEther.send(host, send_port_osculator, "right/button", r);
+  OscEther.send(host, send_port_osculator, "/right/button", r);
   #endif
 
   #ifdef USE_WIFI
@@ -113,7 +113,7 @@ void loop()
   OscWiFi.send(host, send_port_osculator, "/right/x", static_cast<float>(rx/4095.0f));
   OscWiFi.send(host, send_port_osculator, "/right/y", static_cast<float>(ry/4095.0f));
   OscWiFi.send(host, send_port_osculator, "/right/z", static_cast<float>(rz/4095.0f));
-  OscWiFi.send(host, send_port_osculator, "right/button", r);
+  OscWiFi.send(host, send_port_osculator, "/right/button", r);
   #endif
 
   if (++counter >= 30)
